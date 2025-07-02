@@ -1,0 +1,373 @@
+<!-- Mwanzo wa Hati ya HTML kwa Fomu ya Mwongofu Mpya -->
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usajili Mwongofu Mpya T.A.G Mwenge</title>
+    <!-- Kuunganisha Tailwind CSS kwa ajili ya urembo wa haraka na rahisi -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Kuweka fonti ya Inter kwa ajili ya mwonekano bora */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Rangi ya nyuma isiyokoza */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        /* Rangi kuu ya kanisa inaweza kuwa bluu ya Assemblies of God */
+        .primary-blue {
+            background-color: #1a4d8c; /* Bluu nyeusi */
+        }
+        .text-primary-blue {
+            color: #1a4d8c;
+        }
+        /* CSS kwa ajili ya icons */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+            fill: currentColor; /* Itachukua rangi ya maandishi */
+        }
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Kadi kuu ya usajili wa mwongofu mpya -->
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-200">
+        <!-- Sehemu ya Kichwa Kikuu cha Kanisa na Background ya Bluu -->
+        <div class="primary-blue text-white p-4 rounded-t-xl -mx-8 -mt-8 mb-6 text-center">
+            <h2 class="text-2xl font-bold">
+                TANZANIA ASSEMBLIES OF GOD
+            </h2>
+            <h2 class="text-2xl font-bold">
+                MWENGE CHRISTIAN CENTRE
+            </h2>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-center text-primary-blue mb-4">
+            FOMU YA MWONGOFU MPYA.
+        </h3>
+        <p class="text-center text-gray-600 mb-8">
+            Karibu Kwenye Familia ya Watoto wa Mungu.<br>Yohana. 1:12.
+        </p>
+
+        <!-- Mstari wa kutenganisha -->
+        <hr class="border-t-2 border-gray-300 my-6 rounded-full">
+
+        <!-- Fomu ya Usajili wa Mwongofu Mpya -->
+        <form id="newConvertForm" class="space-y-5">
+            <!-- Sehemu ya Jina Kamili -->
+            <div>
+                <label for="fullName" class="block text-gray-700 text-sm font-semibold mb-2">Jina Kamili</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/></svg>
+                    </span>
+                    <input type="text" id="fullName" name="Jina Kamili" placeholder="Jina lako kamili"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none" required>
+                </div>
+            </div>
+
+            <!-- Sehemu ya Tarehe ya Kuokoka Leo -->
+            <div>
+                <label for="salvationDate" class="block text-gray-700 text-sm font-semibold mb-2">Nimeamua Kuokoka Leo Tarehe</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7v-5z"/></svg>
+                    </span>
+                    <input type="date" id="salvationDate" name="Tarehe ya Kuokoka"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none" required>
+                </div>
+            </div>
+
+            <!-- Sehemu ya Jinsia -->
+            <div>
+                <label for="gender" class="block text-gray-700 text-sm font-semibold mb-2">Jinsia</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C9.24 2 7 4.24 7 7s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </span>
+                    <select id="gender" name="Jinsia"
+                            class="flex-grow px-2 py-3 bg-white focus:outline-none appearance-none pr-8" required>
+                        <option value="">Chagua Jinsia</option>
+                        <option value="Mwanaume">Mwanaume</option>
+                        <option value="Mwanamke">Mwanamke</option>
+                    </select>
+                    <span class="absolute right-0 pr-3 flex items-center pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Sehemu ya Rika (Umri) -->
+            <div>
+                <label for="ageGroup" class="block text-gray-700 text-sm font-semibold mb-2">Rika</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 11.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM12 14c-2.33 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </span>
+                    <select id="ageGroup" name="Rika"
+                            class="flex-grow px-2 py-3 bg-white focus:outline-none appearance-none pr-8" required>
+                        <option value="">Chagua Rika</option>
+                        <option value="Mtoto">Mtoto (chini ya miaka 13)</option>
+                        <option value="Kijana">Kijana (miaka 13-25)</option>
+                        <option value="Mtu Mzima">Mtu Mzima (zaidi ya miaka 25)</option>
+                    </select>
+                    <span class="absolute right-0 pr-3 flex items-center pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Sehemu ya Namba ya Simu 1 -->
+            <div>
+                <label for="phoneNumber1" class="block text-gray-700 text-sm font-semibold mb-2">Namba ya Simu 1</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+                    </span>
+                    <input type="tel" id="phoneNumber1" name="Namba ya Simu 1" placeholder="Namba yako ya simu ya kwanza"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none" required>
+                </div>
+            </div>
+
+            <!-- Sehemu ya Namba ya Simu 2 (Hiari) -->
+            <div>
+                <label for="phoneNumber2" class="block text-gray-700 text-sm font-semibold mb-2">Namba ya Simu 2 (Hiari)</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+                    </span>
+                    <input type="tel" id="phoneNumber2" name="Namba ya Simu 2" placeholder="Namba yako ya simu ya pili (hiari)"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Sehemu ya Barua Pepe (Email) -->
+            <div>
+                <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Barua Pepe (Hiari)</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </span>
+                    <input type="email" id="email" name="Barua Pepe" placeholder="email@mfano.com"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Sehemu ya Anuani ya Makazi -->
+            <div>
+                <label for="address" class="block text-gray-700 text-sm font-semibold mb-2">Anuani ya Makazi</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </span>
+                    <input type="text" id="address" name="Anuani ya Makazi" placeholder="Mfano: Mwenge, Dar es Salaam"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none" required>
+                </div>
+            </div>
+
+            <!-- Sehemu ya Mtaa -->
+            <div>
+                <label for="street" class="block text-gray-700 text-sm font-semibold mb-2">Mtaa</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </span>
+                    <input type="text" id="street" name="Mtaa" placeholder="Jina la mtaa wako"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Sehemu ya Namba ya Nyumba -->
+            <div>
+                <label for="houseNumber" class="block text-gray-700 text-sm font-semibold mb-2">Namba ya Nyumba (Hiari)</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    </span>
+                    <input type="text" id="houseNumber" name="Namba ya Nyumba" placeholder="Namba ya nyumba yako (hiari)"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Sehemu ya Rafiki yangu aliyenileta -->
+            <div>
+                <label for="friendName" class="block text-gray-700 text-sm font-semibold mb-2">Rafiki yangu aliyenileta (Hiari)</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/></svg>
+                    </span>
+                    <input type="text" id="friendName" name="Rafiki yangu aliyenileta" placeholder="Jina kamili la rafiki"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Sehemu ya Namba ya Simu ya Rafiki -->
+            <div>
+                <label for="friendPhone" class="block text-gray-700 text-sm font-semibold mb-2">Namba ya Simu ya Rafiki (Hiari)</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+                    </span>
+                    <input type="tel" id="friendPhone" name="Namba ya Simu ya Rafiki" placeholder="Namba ya simu ya rafiki"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Sehemu ya Neno Siri la Siri (Secret Key) -->
+            <div>
+                <label for="secretKey" class="block text-gray-700 text-sm font-semibold mb-2">Neno Siri la Siri</label>
+                <div class="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-primary-blue">
+                    <span class="pl-3 pr-2 py-3">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3-8H9V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2z"/></svg>
+                    </span>
+                    <input type="password" id="secretKey" name="Neno Siri" placeholder="Ingiza neno siri la usajili"
+                           class="flex-grow px-2 py-3 bg-transparent focus:outline-none" required>
+                    <button type="button" id="toggleSecretKey" class="px-3 py-3 focus:outline-none">
+                        <svg id="eyeIcon" class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kitufe cha Kujisajili -->
+            <button type="submit"
+                    class="w-full primary-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 shadow-md">
+                Jisajili Sasa
+            </button>
+        </form>
+
+        <!-- Sehemu ya ujumbe wa mafanikio au hitilafu -->
+        <div id="messageBox" class="mt-6 p-4 rounded-lg text-center hidden"></div>
+    </div>
+
+    <script>
+        // ** MUHIMU: WEKA NENO SIRI LAKO HAPA KWA FOMU YA MWONGOFU MPYA **
+        const SECRET_KEY_MWONGOFU = "YESUANAOKOA"; // BADILISHA HILI NA NENO SIRI LAKO MWENYEWE (Kama "MCC2024Pass")
+
+        // Kazi ya JavaScript kushughulikia utumaji wa fomu
+        document.getElementById('newConvertForm').addEventListener('submit', function(event) {
+            // Zuia fomu isitumwe kwa njia ya kawaida (kuzuia kurefresh ukurasa)
+            event.preventDefault();
+
+            const messageBox = document.getElementById('messageBox');
+            messageBox.classList.add('hidden'); // Ficha ujumbe wa awali
+
+            // Kagua neno siri kwanza
+            const enteredSecretKey = document.getElementById('secretKey').value;
+            if (enteredSecretKey !== SECRET_KEY_MWONGOFU) {
+                messageBox.classList.remove('hidden');
+                messageBox.classList.remove('bg-blue-100', 'text-blue-700', 'bg-green-100', 'text-green-700');
+                messageBox.classList.add('bg-red-100', 'text-red-700');
+                messageBox.innerHTML = `
+                    <p class="font-bold">Samahani, neno siri si sahihi!</p>
+                    <p>Tafadhali jaribu tena na uhakikishe neno siri ni sahihi.</p>
+                `;
+                return; // Sitisha utumaji wa fomu
+            }
+
+            // URL ya Apps Script yako iliyochapishwa (BANDIKA URL YAKO HAPA!)
+            // Hii itakuwa URL MPYA kwa ajili ya fomu ya Mwongofu Mpya
+            const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbxuerCSaYjcaBvne7GZLaJ8XYGE_4MPlYie9WTbzaz28EDmK6ZZryAcaNp90lWipyu5jw/exec'; 
+
+            // Pata data kutoka kwenye fomu na kuongeza tarehe ya sasa ya usajili
+            const formData = new FormData();
+            formData.append('Jina Kamili', document.getElementById('fullName').value);
+            formData.append('Tarehe ya Kuokoka', document.getElementById('salvationDate').value);
+            formData.append('Jinsia', document.getElementById('gender').value);
+            formData.append('Rika', document.getElementById('ageGroup').value); 
+            formData.append('Namba ya Simu 1', document.getElementById('phoneNumber1').value);
+            formData.append('Namba ya Simu 2', document.getElementById('phoneNumber2').value);
+            formData.append('Barua Pepe', document.getElementById('email').value);
+            formData.append('Anuani ya Makazi', document.getElementById('address').value);
+            formData.append('Mtaa', document.getElementById('street').value);
+            formData.append('Namba ya Nyumba', document.getElementById('houseNumber').value);
+            formData.append('Rafiki yangu aliyenileta', document.getElementById('friendName').value); 
+            formData.append('Namba ya Simu ya Rafiki', document.getElementById('friendPhone').value);
+            // Neno Siri halitumwi tena kwenye Apps Script baada ya uthibitishaji wa upande wa client
+            formData.append('Tarehe ya Usajili', new Date().toLocaleDateString('sw-TZ', { 
+                year: 'numeric', 
+                month: '2-digit', 
+                day: '2-digit' 
+            })); 
+
+            // Onyesha ujumbe wa kusubiri
+            messageBox.classList.remove('hidden');
+            messageBox.classList.remove('bg-green-100', 'bg-red-100');
+            messageBox.classList.add('bg-blue-100', 'text-blue-700');
+            messageBox.innerHTML = '<p class="font-bold">Inatuma... Tafadhali subiri kidogo.</p>';
+
+            // Tuma data kwenye Apps Script
+            fetch(appsScriptUrl, {
+                method: 'POST',
+                mode: 'no-cors', 
+                body: formData 
+            })
+            .then(response => {
+                // Kwa sababu ya 'no-cors', hatuwezi kusoma majibu kamili.
+                // Hivyo tunadhani imetumwa kwa mafanikio baada ya network request kufanikiwa.
+                console.log('Fomu imetumwa kwa mafanikio!');
+                
+                // Onyesha ujumbe wa mafanikio
+                messageBox.classList.remove('bg-blue-100', 'text-blue-700', 'bg-red-100', 'text-red-700');
+                messageBox.classList.add('bg-green-100', 'text-green-700');
+                messageBox.innerHTML = `
+                    <p class="font-bold">Hongera!</p>
+                    <p>Umefanikiwa kujisajili kama mwongofu mpya. Asante kwa kujiunga na T.A.G Mwenge Christian Centre!</p>
+                `;
+                // Futa fomu baada ya kutuma
+                document.getElementById('newConvertForm').reset();
+            })
+            .catch((error) => {
+                console.error('Kuna hitilafu wakati wa kutuma data:', error);
+                // Onyesha ujumbe wa hitilafu wa mtandao
+                messageBox.classList.remove('bg-blue-100', 'text-blue-700', 'bg-green-100', 'text-green-700');
+                messageBox.classList.add('bg-red-100', 'text-red-700');
+                messageBox.innerHTML = `
+                    <p class="font-bold">Samahani, kuna hitilafu ya mtandao!</p>
+                    <p>Tafadhali hakikisha umeunganishwa na intaneti na ujaribu tena. Ikiwa tatizo litaendelea, wasiliana na kitengo cha habari MCC.</p>
+                `;
+            });
+        });
+
+        // JavaScript kwa ajili ya kuonyesha/kuficha neno siri
+        const toggleSecretKey = document.getElementById('toggleSecretKey');
+        const secretKeyInput = document.getElementById('secretKey');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        toggleSecretKey.addEventListener('click', function() {
+            const type = secretKeyInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            secretKeyInput.setAttribute('type', type);
+
+            if (type === 'password') {
+                eyeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>`; // Jicho wazi
+            } else {
+                eyeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7 .985-3.14 3.109-5.188 5.669-6.614m6.605 6.605a3 3 0 11-5.828-2.288m0 0a3 3 0 11-5.828-2.288"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2L10 10m2 2l2 2"></path>`; // Jicho lililofungwa
+            }
+        });
+    </script>
+</body>
+</html>
